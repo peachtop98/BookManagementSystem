@@ -41,7 +41,7 @@ namespace _1.BookManagementSystem
                         MessageBox.Show("请输入密码！ ");
                         return;
                     }
-                    string sql = "insert into BookDB(UserName, Password)values('{0}', '{1}')";
+                    string sql = "insert into register(UserName, Password)values('{0}', '{1}')";
                     sql = string.Format(sql, tbUserName.Text,tbPassword.Text);//填充 SQL 语句
                     //创建 SqlCommand 对象
                     SqlCommand cmd = new SqlCommand(sql, conn);
