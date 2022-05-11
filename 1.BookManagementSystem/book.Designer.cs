@@ -38,19 +38,19 @@
             // tbUserName
             // 
             this.tbUserName.Font = new System.Drawing.Font("宋体", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbUserName.Location = new System.Drawing.Point(425, 164);
+            this.tbUserName.Location = new System.Drawing.Point(536, 209);
             this.tbUserName.Multiline = true;
             this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(179, 28);
+            this.tbUserName.Size = new System.Drawing.Size(209, 34);
             this.tbUserName.TabIndex = 0;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(425, 210);
+            this.tbPassword.Location = new System.Drawing.Point(536, 263);
             this.tbPassword.Multiline = true;
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(179, 28);
+            this.tbPassword.Size = new System.Drawing.Size(209, 37);
             this.tbPassword.TabIndex = 1;
             // 
             // btnLogin
@@ -62,7 +62,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("宋体", 12F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(394, 257);
+            this.btnLogin.Location = new System.Drawing.Point(500, 326);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(103, 38);
             this.btnLogin.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("宋体", 12F);
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(503, 257);
+            this.btnRegister.Location = new System.Drawing.Point(633, 326);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(103, 38);
             this.btnRegister.TabIndex = 4;
@@ -92,11 +92,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(699, 408);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(869, 526);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUserName);
+            this.DoubleBuffered = true;
             this.Name = "LoginForm";
             this.Text = "管理员登陆";
             this.Load += new System.EventHandler(this.Form1_Load);

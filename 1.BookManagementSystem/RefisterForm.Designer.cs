@@ -44,7 +44,7 @@
             this.btnRedister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRedister.Font = new System.Drawing.Font("宋体", 15F);
             this.btnRedister.ForeColor = System.Drawing.Color.White;
-            this.btnRedister.Location = new System.Drawing.Point(110, 246);
+            this.btnRedister.Location = new System.Drawing.Point(135, 260);
             this.btnRedister.Name = "btnRedister";
             this.btnRedister.Size = new System.Drawing.Size(149, 45);
             this.btnRedister.TabIndex = 0;
@@ -55,20 +55,20 @@
             // tbUserName
             // 
             this.tbUserName.Font = new System.Drawing.Font("宋体", 15F);
-            this.tbUserName.Location = new System.Drawing.Point(157, 103);
+            this.tbUserName.Location = new System.Drawing.Point(199, 109);
             this.tbUserName.Multiline = true;
             this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(265, 41);
+            this.tbUserName.Size = new System.Drawing.Size(274, 45);
             this.tbUserName.TabIndex = 2;
             // 
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("宋体", 15F);
-            this.tbPassword.Location = new System.Drawing.Point(157, 174);
+            this.tbPassword.Location = new System.Drawing.Point(199, 184);
             this.tbPassword.Multiline = true;
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '#';
-            this.tbPassword.Size = new System.Drawing.Size(265, 40);
+            this.tbPassword.Size = new System.Drawing.Size(274, 40);
             this.tbPassword.TabIndex = 3;
             // 
             // btnCancel
@@ -80,7 +80,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("宋体", 15F);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(273, 246);
+            this.btnCancel.Location = new System.Drawing.Point(324, 260);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(149, 45);
             this.btnCancel.TabIndex = 4;
@@ -93,11 +93,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(533, 367);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(621, 409);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUserName);
             this.Controls.Add(this.btnRedister);
+            this.DoubleBuffered = true;
             this.Name = "RegisterForm";
             this.Text = "注册";
             this.Load += new System.EventHandler(this.MainMenuForm_Load);

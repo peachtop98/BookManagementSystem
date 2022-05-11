@@ -48,8 +48,8 @@ namespace _1.BookManagementSystem
                         if (Pwd == password)
                         {
                             MessageBox.Show("登录成功！ ");
-                            //this.Hide(); //隐藏当前窗体
-                            //new MainMenuForm().Show();//开启主菜单窗体
+                            this.Hide(); //隐藏当前窗体
+                            new MainMenuForm().Show();//开启主菜单窗体
                         }
                         else
                         {

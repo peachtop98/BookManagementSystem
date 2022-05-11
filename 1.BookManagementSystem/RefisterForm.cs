@@ -25,7 +25,7 @@ namespace _1.BookManagementSystem
 
         private void btnRedister_Click(object sender, EventArgs e)
         {
-            string connStr = "Data source=阿斯顿\\SQLEXPRESS;Initial Catalog = BookDB; User ID = sa; Password = 123456";
+            string connStr = "Data source=阿斯顿\\SQLEXPRESS;Initial Catalog = School; User ID = sa; Password = 123456";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connStr))
@@ -41,7 +41,7 @@ namespace _1.BookManagementSystem
                         MessageBox.Show("请输入密码！ ");
                         return;
                     }
-                    string sql = "insert into register(UserName, Password)values('{0}', '{1}')";
+                    string sql = "insert into Userinfo(name, Password)values('{0}', '{1}')";
                     sql = string.Format(sql, tbUserName.Text,tbPassword.Text);//填充 SQL 语句
                     //创建 SqlCommand 对象
                     SqlCommand cmd = new SqlCommand(sql, conn);
