@@ -16,7 +16,7 @@ namespace _1.BookManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new MainMenuForm());
         }
     }
 }

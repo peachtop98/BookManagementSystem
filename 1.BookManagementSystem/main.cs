@@ -47,7 +47,7 @@ namespace _1.BookManagementSystem
         private void btnBook_Click(object sender, EventArgs e)
         {
             this.Hide(); //隐藏当前窗体
-            //new BookManagementForm().Show(); //显示图书管理窗体
+            new BookManagementForm().Show(); //显示图书管理窗体
         }
 
         private void btnReader_Click(object sender, EventArgs e)

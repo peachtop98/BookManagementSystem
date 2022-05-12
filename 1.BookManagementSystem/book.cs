@@ -72,10 +72,9 @@ namespace _1.BookManagementSystem
             }
         }
 
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
 
-
-
-
-
+        }
     }
 }

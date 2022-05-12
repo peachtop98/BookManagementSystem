@@ -116,9 +116,8 @@ namespace _1.BookManagementSystem
                 {
                     conn.Open(); //打开数据库连接
                     SqlCommand comm = conn.CreateCommand();
-                    comm.CommandText = "select rdType 类别号,rdTypeName 类别名称,canLendQty 可借数量, " +
-                        "canLendDay 可借天数 from ReaderType where rdTypeName like @rdTypeName + '%'";
-                    comm.Parameters.AddWithValue("@rdTypeName", tbRdTypeName.Text);
+                    comm.CommandText = "select rdType 类别号,rdTypeName 类别名称,canLendQty 可借数量, canLendDay 可借天数 from ReaderType where rdType like @rdType + '%'";
+                    comm.Parameters.AddWithValue("@rdType", tbRdType.Text);
                     SqlDataAdapter sda = new SqlDataAdapter(comm);
                     DataSet ds = new DataSet();
                     sda.Fill(ds);
