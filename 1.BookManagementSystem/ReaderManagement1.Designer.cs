@@ -48,6 +48,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRdCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button4.Location = new System.Drawing.Point(636, 422);
+            this.button4.Location = new System.Drawing.Point(568, 422);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(118, 41);
             this.button4.TabIndex = 32;
@@ -76,7 +77,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button3.Location = new System.Drawing.Point(431, 422);
+            this.button3.Location = new System.Drawing.Point(383, 422);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(121, 41);
             this.button3.TabIndex = 31;
@@ -110,7 +111,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.Location = new System.Drawing.Point(229, 422);
+            this.button1.Location = new System.Drawing.Point(205, 422);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 41);
             this.button1.TabIndex = 29;
@@ -184,6 +185,7 @@
             this.tbRdType.Name = "tbRdType";
             this.tbRdType.Size = new System.Drawing.Size(118, 25);
             this.tbRdType.TabIndex = 23;
+            this.tbRdType.TextChanged += new System.EventHandler(this.tbRdType_TextChanged);
             // 
             // label4
             // 
@@ -270,6 +272,23 @@
             this.label6.TabIndex = 35;
             this.label6.Text = "姓名";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(712, 422);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(126, 41);
+            this.button5.TabIndex = 37;
+            this.button5.Text = "清空框内数据";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // ReaderManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -277,6 +296,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(850, 514);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BorrowNum);
@@ -325,5 +345,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button5;
     }
 }

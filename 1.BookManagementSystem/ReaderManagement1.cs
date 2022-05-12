@@ -47,7 +47,7 @@ namespace _1.BookManagementSystem
                 {
                     conn.Open(); //打开数据库连接
                     SqlCommand comm = conn.CreateCommand();
-                    comm.CommandText = "select rdID 编号,rdType 类别名,rdNme 姓名, rdDept 单位，rdQQ QQ," +
+                    comm.CommandText = "select rdID 编号,rdType 类别名,rdNme 姓名, rdDept 单位,rdQQ QQ," +
                         "rdBorrowQty 已借数量 from reader";
                     SqlDataAdapter sda = new SqlDataAdapter(comm);
                     DataSet ds = new DataSet();
@@ -61,9 +61,9 @@ namespace _1.BookManagementSystem
                     BorrowNum.DataBindings.Clear();
                     tbRdType.DataBindings.Add("Text", ds.Tables[0], "编号");//rdID
                     tbRdTypeName.DataBindings.Add("Text", ds.Tables[0], "类别名");//rdType
+                    textBox2.DataBindings.Add("Text", ds.Tables[0], "姓名");//rdNme
                     tbCanLendQty.DataBindings.Add("Text", ds.Tables[0], "单位");//rdDept
                     QQ1.DataBindings.Add("Text", ds.Tables[0], "QQ");//rdQQ
-                    textBox2.DataBindings.Add("Text", ds.Tables[0], "姓名");//rdNme
                     BorrowNum.DataBindings.Add("Text", ds.Tables[0], "已借数量");//rdBorrowQty
                 }
             }
@@ -114,20 +114,21 @@ namespace _1.BookManagementSystem
                 {
                     conn.Open(); //打开数据库连接
                     SqlCommand comm = conn.CreateCommand();
-                    comm.CommandText = "select rdID 编号,rdType 类别名,rdNme 姓名,rdQQ QQ," +
+                    comm.CommandText = "select rdID 编号,rdType 类别名,rdNme 姓名,rdDept 单位,rdQQ QQ," +
                         "rdBorrowQty 已借数量 from reader where rdID like @rdID + '%'";
                     comm.Parameters.AddWithValue("@rdID", tbRdType.Text);
                     SqlDataAdapter sda = new SqlDataAdapter(comm);
                     DataSet ds = new DataSet();
                     sda.Fill(ds);
                     dgvRdCategory.DataSource = ds.Tables[0];//设置表格的数据源
+                    DataBind(); //重新加载数据库中的数据（ 刷新窗体表格中的数据）
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("操作数据库出错！ " + ex.Message);
             }
-            empty();
+            //empty();
         }
 
         private void ReaderManagementForm_Load(object sender, EventArgs e)
@@ -160,7 +161,7 @@ namespace _1.BookManagementSystem
                 }
 
             }
-            empty();
+            //empty();
         }
 
         private void button4_Click(object sender, EventArgs e)//修改按键事件
@@ -188,6 +189,15 @@ namespace _1.BookManagementSystem
             {
                 MessageBox.Show("修改失败！ " + ex.Message);
             }
+        }
+
+        private void tbRdType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)//清空框内数据
+        {
             empty();
         }
     }

@@ -18,6 +18,14 @@ namespace _1.BookManagementSystem
         {
             InitializeComponent();
         }
+        private void empty()//将横框清空
+        {
+            tbRdType.Text = "";
+            tbCanLendDay.Text = "";
+            tbRdTypeName.Text = "";
+            tbCanLendQty.Text = "";
+
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -122,6 +130,7 @@ namespace _1.BookManagementSystem
                     DataSet ds = new DataSet();
                     sda.Fill(ds);
                     dgvRdCategory.DataSource = ds.Tables[0];//设置表格的数据源
+                    DataBind(); //重新加载数据库中的数据（ 刷新窗体表格中的数据）
                 }
             }
             catch (Exception ex)
@@ -179,6 +188,11 @@ namespace _1.BookManagementSystem
             {
                 MessageBox.Show("修改失败！ " + ex.Message);
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            empty();
         }
     }
  }

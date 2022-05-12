@@ -58,9 +58,9 @@
             this.btnBook.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBook.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBook.Location = new System.Drawing.Point(534, 159);
+            this.btnBook.Location = new System.Drawing.Point(518, 152);
             this.btnBook.Name = "btnBook";
-            this.btnBook.Size = new System.Drawing.Size(80, 32);
+            this.btnBook.Size = new System.Drawing.Size(114, 40);
             this.btnBook.TabIndex = 1;
             this.btnBook.Text = "图书管理";
             this.btnBook.UseVisualStyleBackColor = false;
@@ -124,7 +124,6 @@
             this.Controls.Add(this.btnBook);
             this.Controls.Add(this.btnCategory);
             this.DoubleBuffered = true;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "MainMenuForm";
             this.Text = "主菜单";
             this.Load += new System.EventHandler(this.MainMenuForm_Load);

@@ -48,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRdCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,12 +100,13 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button4.Location = new System.Drawing.Point(650, 426);
+            this.button4.Location = new System.Drawing.Point(588, 426);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(118, 47);
             this.button4.TabIndex = 50;
             this.button4.Text = "修改";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -114,12 +116,13 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button3.Location = new System.Drawing.Point(445, 426);
+            this.button3.Location = new System.Drawing.Point(403, 426);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 47);
+            this.button3.Size = new System.Drawing.Size(127, 47);
             this.button3.TabIndex = 49;
             this.button3.Text = "删除";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -136,6 +139,7 @@
             this.button2.TabIndex = 48;
             this.button2.Text = "添加";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -146,12 +150,13 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.Location = new System.Drawing.Point(243, 426);
+            this.button1.Location = new System.Drawing.Point(220, 426);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 47);
             this.button1.TabIndex = 47;
             this.button1.Text = "查询";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvRdCategory
             // 
@@ -173,6 +178,7 @@
             this.dgvRdCategory.RowTemplate.Height = 27;
             this.dgvRdCategory.Size = new System.Drawing.Size(636, 366);
             this.dgvRdCategory.TabIndex = 46;
+            this.dgvRdCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRdCategory_CellContentClick);
             // 
             // btnBackMenu
             // 
@@ -189,6 +195,7 @@
             this.btnBackMenu.TabIndex = 45;
             this.btnBackMenu.Text = "返回主菜单";
             this.btnBackMenu.UseVisualStyleBackColor = false;
+            this.btnBackMenu.Click += new System.EventHandler(this.btnBackMenu_Click);
             // 
             // tbRdTypeName
             // 
@@ -265,6 +272,23 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "书号";
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(730, 426);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(126, 47);
+            this.button5.TabIndex = 55;
+            this.button5.Text = "清空框内数据";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // BookManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -272,6 +296,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(887, 531);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BorrowNum);
@@ -319,5 +344,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button5;
     }
 }
