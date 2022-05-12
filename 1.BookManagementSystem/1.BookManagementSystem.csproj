@@ -66,6 +66,12 @@
     <Compile Include="ReaderCategoryForm.Designer.cs">
       <DependentUpon>ReaderCategoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReaderManagement1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReaderManagement1.Designer.cs">
+      <DependentUpon>ReaderManagement1.cs</DependentUpon>
+    </Compile>
     <Compile Include="RefisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </Compile>
     <EmbeddedResource Include="ReaderCategoryForm.resx">
       <DependentUpon>ReaderCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReaderManagement1.resx">
+      <DependentUpon>ReaderManagement1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RefisterForm.resx">
       <DependentUpon>RefisterForm.cs</DependentUpon>

@@ -26,6 +26,11 @@ namespace _1.BookManagementSystem
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            this.dgvRdCategory.DefaultCellStyle.Font = new Font("Tahoma", 15);
+            this.dgvRdCategory.DefaultCellStyle.ForeColor = Color.Blue;
+            this.dgvRdCategory.DefaultCellStyle.BackColor = Color.Beige;
+            this.dgvRdCategory.DefaultCellStyle.SelectionForeColor = Color.Yellow;
+            this.dgvRdCategory.DefaultCellStyle.SelectionBackColor = Color.Black;
             DataBind();
         }
         private void DataBind()
@@ -59,6 +64,7 @@ namespace _1.BookManagementSystem
         private void btnBackMenu_Click(object sender, EventArgs e)
         {
             this.Close();
+            new MainMenuForm().Show();
         }
 
         private void ReaderCategoryForm_Load(object sender, EventArgs e)
@@ -110,7 +116,8 @@ namespace _1.BookManagementSystem
                 {
                     conn.Open(); //打开数据库连接
                     SqlCommand comm = conn.CreateCommand();
-                    comm.CommandText = "select rdType 类别号,rdTypeName 类别名称,canLendQty 可借数量, canLendDay 可借天数 from ReaderType where rdTypeName like @rdTypeName + '%'";
+                    comm.CommandText = "select rdType 类别号,rdTypeName 类别名称,canLendQty 可借数量, " +
+                        "canLendDay 可借天数 from ReaderType where rdTypeName like @rdTypeName + '%'";
                     comm.Parameters.AddWithValue("@rdTypeName", tbRdTypeName.Text);
                     SqlDataAdapter sda = new SqlDataAdapter(comm);
                     DataSet ds = new DataSet();
@@ -160,7 +167,7 @@ namespace _1.BookManagementSystem
                 {
                     conn.Open(); //打开数据库连接
                     SqlCommand comm = conn.CreateCommand();
-                    comm.CommandText = "update ReaderType setrdType = @rdType,rdTypeName = @rdTypeName,canLendQty = @canLendQty,canLendDay =@canLendDay where rdType = @rdType";
+                    comm.CommandText = "update ReaderType set rdType = @rdType,rdTypeName = @rdTypeName,canLendQty = @canLendQty,canLendDay =@canLendDay where rdType = @rdType";
                     comm.Parameters.AddWithValue("@rdType", tbRdType.Text);
                     comm.Parameters.AddWithValue("@rdTypeName",tbRdTypeName.Text);
                     comm.Parameters.AddWithValue("@canLendQty",tbCanLendQty.Text);

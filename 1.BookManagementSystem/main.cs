@@ -53,7 +53,7 @@ namespace _1.BookManagementSystem
         private void btnReader_Click(object sender, EventArgs e)
         {
             this.Hide(); //隐藏当前窗体
-            //new ReaderManagementForm().Show(); //显示读者管理窗体
+            new ReaderManagementForm().Show(); //显示读者管理窗体
         }
 
         private void btnBorrRet_Click(object sender, EventArgs e)
