@@ -144,7 +144,7 @@ namespace _1.BookManagementSystem
                     {
                         conn.Open(); //打开数据库连接
                         SqlCommand comm = conn.CreateCommand();
-                        comm.CommandText = "delete from BookTabel where bkID =@bkID";
+                        comm.CommandText = "delete from BookTable where bkID =@bkID";
                         comm.Parameters.AddWithValue("@bkID", tbRdType.Text);
                         comm.ExecuteNonQuery(); //执行 SQL 语句
                         MessageBox.Show("删除成功！ ");

@@ -31,7 +31,7 @@ namespace _1.BookManagementSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string connStr = "Data source=阿斯顿\\SQLEXPRESS;Initial Catalog = School; User ID = sa; Password = 123456";
+            string connStr = "Data source=阿斯顿\\SQLEXPRESS;Initial Catalog = BookDB; User ID = sa; Password = 123456";
             try
             {
                 string User = tbUserName.Text;
@@ -40,7 +40,7 @@ namespace _1.BookManagementSystem
                 {
                     conn.Open(); //打开数据库连接
                     SqlCommand comm = conn.CreateCommand();
-                    comm.CommandText = "select * from Userinfo where name = '" + User +"'";
+                    comm.CommandText = "select * from register where UserName = '" + User +"'";
                     SqlDataReader reader = comm.ExecuteReader();
                     if (reader.Read())
                     {
