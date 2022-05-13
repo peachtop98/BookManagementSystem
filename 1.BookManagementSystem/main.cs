@@ -59,7 +59,7 @@ namespace _1.BookManagementSystem
         private void btnBorrRet_Click(object sender, EventArgs e)
         {
             this.Hide(); //隐藏当前窗体
-            //new BookManagementForm().Show(); //显示借书还书窗体
+            new Borrowbooks().Show(); //显示借书还书窗体
         }
     }
 }

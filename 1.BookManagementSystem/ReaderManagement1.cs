@@ -59,12 +59,12 @@ namespace _1.BookManagementSystem
                     QQ1.DataBindings.Clear();
                     textBox2.DataBindings.Clear();
                     BorrowNum.DataBindings.Clear();
-                    tbRdType.DataBindings.Add("Text", ds.Tables[0], "编号");//rdID
-                    tbRdTypeName.DataBindings.Add("Text", ds.Tables[0], "类别名");//rdType
-                    textBox2.DataBindings.Add("Text", ds.Tables[0], "姓名");//rdNme
-                    tbCanLendQty.DataBindings.Add("Text", ds.Tables[0], "单位");//rdDept
-                    QQ1.DataBindings.Add("Text", ds.Tables[0], "QQ");//rdQQ
-                    BorrowNum.DataBindings.Add("Text", ds.Tables[0], "已借数量");//rdBorrowQty
+                    tbRdType.DataBindings.Add("Text", ds.Tables[0], "编号");//rdID，把得到的数据放入框框内
+                    tbRdTypeName.DataBindings.Add("Text", ds.Tables[0], "类别名");//rdType把得到的数据放入框框内
+                    textBox2.DataBindings.Add("Text", ds.Tables[0], "姓名");//rdNme把得到的数据放入框框内
+                    tbCanLendQty.DataBindings.Add("Text", ds.Tables[0], "单位");//rdDept把得到的数据放入框框内
+                    QQ1.DataBindings.Add("Text", ds.Tables[0], "QQ");//rdQQ把得到的数据放入框框内
+                    BorrowNum.DataBindings.Add("Text", ds.Tables[0], "已借数量");//rdBorrowQty把得到的数据放入框框内
                 }
             }
             catch (Exception ex)
